@@ -26,7 +26,7 @@
             
             if($this->subType === 'antipulci' && date("m.d.y") == "03.16.22" ){
                 $this->availability = false;
-            } elseif ( $this->subType === 'antizecche' && date("m.d.y") == "03.16.22"){
+            } elseif ( $this->subType === 'antizecche' && date("m.d.y") == "06.16.22"){
                 $this->availability= false;
             } else {
                 $this->availability = true;
