@@ -6,16 +6,15 @@
 
     class health extends products {
         public $type;
+        protected $subType;
         protected $availability;
 
-        //construct con sottotipo
-        public function __construct($name, $id, $subType)
-        {
-            parent::__construct($name, $id);
-
-            // aggiungo inserimento sottotipo
+        //funzione per setsubtype
+        public function setSubType($subType){
             $this->subType = $subType;
         }
+
+
         // funzione per set tipo
         public function setType($type){
             $this->type = $type;

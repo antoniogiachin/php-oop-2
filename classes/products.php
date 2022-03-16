@@ -1,17 +1,19 @@
 <!-- classe padre di prodotti -->
 <?php
 
-    class products {
+    require_once __DIR__ . '/user.php';
+    class products extends user {
 
         //attributi
         public $name;
         public $id;
         protected $price;
-        protected $discount =0;
 
         // funzione construct del prodotto
-        public function __construct($name, $id)
+        public function __construct($username, $mail, $name, $id)
         {
+            parent::__construct($username, $mail);
+
             $this->name = $name;
             // id deve essere un numero e maggiore di 0
             if(is_numeric($id) && $id > 0){
@@ -22,9 +24,9 @@
         }
 
         // funzione set prezzo con IVA
-        public function setPrice($price){
+        public function getPrice($price){
             //arrotondato per difetto
-            $this->price = floor($price + ($price *22) / 100);
+            $this->price = floor($price + (($price *22) / 100) - ($price * $this->discount / 100));
         }
 
 
