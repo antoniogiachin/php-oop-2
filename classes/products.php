@@ -17,7 +17,7 @@
             if(is_numeric($id) && $id > 0){
                 $this->id = $id;
             } else{
-                $this->id = '<em> Id socnosciuto </em>';
+                $this->id = '<em> Id sconosciuto </em>';
             }
         }
 
