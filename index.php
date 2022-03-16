@@ -8,6 +8,8 @@
     require_once __DIR__ . '/classes/user.php';
 
 
+
+
     // // cibo
     // $croccantini= new food('gino', 'gino@gmail.com','crocchets', 23);
     // $croccantini->setType('food');
@@ -40,11 +42,14 @@
     var_dump($cuccia);
 
     //salute
-    $antipulci= new health('marco', 'marco@mail.com', 'pulcer', 600);
+    $antipulci= new health('marco', 'st', 'pulcer', 600);
     $antipulci->setType('health');
     $antipulci->setSubType('antipulci');
     $antipulci->setAvailability();
     $antipulci->getPrice(60);
+    $antipulci->setCardNumber();
+    $antipulci->getCardExpiration();
+    $antipulci->getCardValid();
     var_dump($antipulci);
 
 
