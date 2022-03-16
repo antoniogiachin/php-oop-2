@@ -1,3 +1,4 @@
+<!-- classe padre di user -->
 <?php
 
     class user {

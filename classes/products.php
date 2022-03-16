@@ -1,4 +1,4 @@
-<!-- classe padre di prodotti -->
+
 <?php
 
     require_once __DIR__ . '/user.php';
